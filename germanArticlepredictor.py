@@ -13,14 +13,14 @@ from keras.models import Sequential, load_model
 from keras.layers import Dense, Dropout, Conv1D, MaxPooling1D, Flatten
 from keras.optimizers import Adam
 
-maxWordLength = 30
-convLetters = 4
-filepathToSave = 'convGPUModel.h5'
-filepathToOpen = 'articlePredictorConv2.h5'
-train = False
-learningRate = 0.001
-batchSize = 128
-nbEpochs = 20
+maxWordLength = 30                              #the maximum length of a word, this will also create a neural net with input shape of this multiplied by alphabet's length see README.md for more info or contact me
+convLetters = 4                                 #how long we want our convolutional neural network feature should be - 4 means that every feature will be 4 letters long, which means it will be the size of this multiplied by alphabet's length
+filepathToSave = 'convGPUModel.h5'              #filepath to save our trained model
+filepathToOpen = 'articlePredictorConv2.h5'     #filepath to open a pretrained model
+train = False                                   #if this is set to True we train our model if this is False then we test our pretrained model
+learningRate = 0.001                            #the learning rate of a model
+batchSize = 128                                 #the batch size our neural net is trained on 
+nbEpochs = 20                                   #how many epochs we want to train our model
 
 
 
