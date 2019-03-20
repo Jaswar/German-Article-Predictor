@@ -58,8 +58,6 @@ predictor = Predictor(nI = inputSize, nO = 3, lr = learningRate)
 
 if train:
     
-    from tensorflow.python.client import device_lib
-    print(device_lib.list_local_devices())
     
     articles = dataset.iloc[:,1]
     oheArticles = np.zeros((len(articles), 3))
@@ -94,7 +92,7 @@ if train:
 
 else:
     
-    model = predictor.loadModel(filepath = 'convTest.h5')
+    model = predictor.loadModel(filepathToOpen)
     
     while True:
         print('\n')
